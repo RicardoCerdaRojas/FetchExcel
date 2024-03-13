@@ -25,6 +25,8 @@ function App() {
 	const handleEmailButtonClick = async (row) => {
 		setLoading(true);
 		setError(null);
+		console.log(loading);
+		console.log(error);
 		console.log(row);
 		try {
 			const response = await axios.post("http://localhost:3100/sendemail", row);
